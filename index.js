@@ -1,165 +1,3 @@
-// -----------------Keyword------------------------------------
-
-// var --> function
-// let --> block
-// const --> block
-
-// function sayHello() {
-//   for (var i = 0; i < 5; i++) {
-   // console.log(i);
-  // }
-  //below statement access in var keyword but not access in let keyword and throw error
-  //  console.log(i); 
-// }
-// sayHello();
-
-//throw error in below code
-//in const keyword value not a reassign
-// const x = 2;
-// x = 3;
-
-
-// -------------Objects--------------------------------------
-
-// const person = {
-//   name: 'sehal',
-//   walk() {},
-//   talk() {}
-// }
-//  person.talk();
-//  person.name = '';
-
-//  const targetMember = 'name';
-//  person[targetMember.value] = 'John';
-
-//------------This keyword---------------------------------
-
-//  const person = {
-//   name: "sehal",
-//   walk(){
-//     console.log(this);
-//   }
-// };
-// person.walk();
-
-// const walk = person.walk.bind(person);
-// walk();
-
-//-----------Arrow function--------------------------------
-
-// write code in javascript
-// const square = function(number){
-//   return number * number;
-// }
-
-//write code in Es6
-// const add = (a, b) => a + b;
-
-// console.log(add(5,4));
-
-// const jobs = [
-//   { id: 1, isActive: true },
-//   { id: 2, isActive: true },
-//   { id: 3, isActive: false },
-// ];
-// write code in javascript
-// const activeJobs = jobs.filter(function(job) { return job.isActive; });
-
-//write code in Es6
-// const activeJobs = jobs.filter(job => job.isActive);
-
-// const person = {
-//   talk(){
-//     var self = this;
-//     setTimeout(() => {
-//       console.log("this",this);
-//     },1000);
-//   }
-// };
-// person.talk();
-
-//---------------destructuring------------------------
-
-// const address = {
-//   street: '',
-//   city: '',
-//   country: ''
-// };
-
-// Es5 code
-// const street = address.street;
-// const city = address.city;
-// const country = address.country;
-
-// Es6 code
-// const { street, city, country } = address;
-// const { street: st } = address;
-
-//--------------spread oprator----------------------------
-
-// const first = [1, 2, 3];
-// const second = [4, 5, 6];
-
-// const combined = first.concat(second);
-//add element in a middle and end
-// const combined = [...first, 'a', ...second, 'b']
-
-// const clone = [...first, ...second];
-// console.log(clone); 
-// const three = { name: "Mosh" };
-// const four = { job: "Instuctor" };
-
-// const combined = { ...three, ...four, location: "india" };
-// console.log(combined);
-
-//---------Classes and constuctor method------------------
-
-// class Person {
-
-//   constructor(name,age) {
-//     this.name = name;
-//     this.age = age;
-//   }
-
-//   walk() {
-//     console.log("walk");
-//   }
-// }
-
-// const person = new Person('Mosh',33);
-// console.log(person.name);
-// console.log(person.age);
-// person.walk();
-
-//-----------Inheritence or Composition-----------------------
-
-// class Person {
-
-//   constructor(name) {
-//     this.name = name;
-
-//   }
-
-//   walk() {
-//     console.log("walk");
-//   }
-// }
-
-// class Teacher extends Person {
-//   constructor(name, degree) {
-//     super(name);
-//     this.degree = degree;
-//   }
-
-//   teach() {
-//     console.log("teach");
-//   }
-// }
-// const teacher = new Teacher('Mosh', 'MSC');
-// teacher.teach();
-// console.log(teacher.degree);
-// console.log(teacher.name);
-
 // ---------------Array.map()----------------------------
 
 // const colors = ['red', 'green', 'blue'];
@@ -321,19 +159,19 @@ const names = ['mahek', 'vishwas', 'rohit'];
 let reduce = names.reduce(myfunction);
 
 function myfunction(total, string) {
-  return total - string;
+  return total + string;
 }
 // console.log(reduce);
-// output : NAN
+// output : mahekvishwasrohit
 
 //-----------reduceright---------------------
 let reduceright = names.reduce(myfunction1);
 
 function myfunction1(total, string) {
-  return total - string;
+  return total + string;
 }
 // console.log(reduceright);
-// output : NAN
+// output : rohitvishwasmahek
 
 //------------indexOf-----------------------
 let sur = surname.indexOf('dabhi');
